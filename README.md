@@ -1,30 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Getting started
 
-## Getting Started
+Install all the required packages
 
-First, run the development server:
+```bash
+npm install
+```
+
+Run development server (on port 3000)
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To use another port run
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+npm run dev -- -p 3456
+```
 
-## Learn More
+**We will be testing the application using above commands,
+there is no need to run a production build.**
 
-To learn more about Next.js, take a look at the following resources:
+You can add any additional libraries you need, just make sure the package.json is updated before sending the solution.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# How to send us the solution
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+There are two options:
 
-## Deploy on Vercel
+- publish your code to a git repo (on github, gitlab, etc.) where we can access it,
+- send us a compressed file containing this whole directory (please remove node_modules before creating the archive).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please let us know by e-mail if you have any questions about submitting the solution!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# What's included
+
+- React support
+- TypeScript support
+- [ant.design](https://ant.design/) for UI components
+- [axios](https://github.com/axios/axios/) for HTTP requests in node.js
+
+## If not using TypeScript
+
+You can just use `.js` files and add `// @ts-nocheck` to the top of `.ts` & `.tsx` files.
+
+## If not using ant.design
+
+Remove the line importing `antd/dist/antd.css` from `_app.tsx` as ant overrides some global styles.
