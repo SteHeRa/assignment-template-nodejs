@@ -36,7 +36,7 @@ Please let us know by e-mail if you have any questions about submitting the solu
 
 - React support
 - TypeScript support
-- [ant.design](https://ant.design/) for UI components
+- [ant.design](https://ant.design/) for UI components (See https://ant.design/components/overview/ for list of available components)
 - [axios](https://github.com/axios/axios/) for HTTP requests in node.js
 
 ## If not using TypeScript

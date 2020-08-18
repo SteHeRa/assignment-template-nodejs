@@ -7,11 +7,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Stotles CF preview</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Typography.Title>Stotles ContractsFinder Browser</Typography.Title>
-      {/* See https://ant.design/components/overview/ for list of available components */}
     </div>
   );
 }
