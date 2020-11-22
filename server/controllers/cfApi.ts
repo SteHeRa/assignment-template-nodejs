@@ -3,14 +3,13 @@ import { Request, Response } from 'express';
 
 const cfControl = {
   getNotices: async (req: Request, res: Response) => {
-    console.log('called');
     try {
       if (
         typeof req.query.from === 'string' &&
         typeof req.query.to === 'string'
       ) {
-        const from = new Date(req.query.from);
-        const to = new Date(req.query.to);
+        const from = new Date(+req.query.from);
+        const to = new Date(+req.query.to);
         const notices = await fetch(
           'https://www.contractsfinder.service.gov.uk/api/rest/2/search_notices/json',
           {

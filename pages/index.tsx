@@ -27,19 +27,6 @@ export default function Home() {
     getNotices(from, to);
   }, [from, to]);
 
-  useEffect(() => {
-    console.log(filter);
-    if (filter.length > 0) {
-      setNotices(
-        notices.filter((notice) => {
-          const regExp = new RegExp(filter);
-          if (notice.description.match(regExp)) return true;
-          else return false;
-        })
-      );
-    }
-  }, [filter]);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -48,7 +35,15 @@ export default function Home() {
       </Head>
       <Typography.Title>Stotles ContractsFinder Browser</Typography.Title>
       <SearchForm setFrom={setFrom} setTo={setTo} />
-      <NoticesList notices={notices} filter={filter} setFilter={setFilter} />
+      <NoticesList
+        notices={notices.filter((notice) => {
+          const regExp = new RegExp(filter);
+          if (notice.item.description.match(regExp)) return true;
+          else return false;
+        })}
+        filter={filter}
+        setFilter={setFilter}
+      />
     </div>
   );
 }

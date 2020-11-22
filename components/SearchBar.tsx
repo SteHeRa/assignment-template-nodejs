@@ -4,11 +4,10 @@ const SearchBar = ({ filter, setFilter }) => {
   return (
     <form>
       <label htmlFor="search">
-        Search:
+        {`Search In Description:  `}
         <input
           type="text"
           name="search"
-          placeholder="Type here"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         ></input>

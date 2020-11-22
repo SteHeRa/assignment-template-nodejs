@@ -12,13 +12,11 @@ const SearchForm = ({ setFrom, setTo }) => {
       <h2>Search For Contracts</h2>
       <form onSubmit={(e) => handleSubmit(e)}>
         <label htmlFor="from">
-          {' '}
-          From:
+          {`From: `}
           <input type="Date" name="from"></input>
         </label>
         <label htmlFor="to">
-          {' '}
-          To:
+          {`To: `}
           <input type="Date" name="to"></input>
         </label>
         <input type="submit"></input>
